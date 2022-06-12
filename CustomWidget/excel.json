@@ -13,14 +13,14 @@
     {
       "kind": "main",
       "tag": "com-sap-sac-excel-style",
-      "url": "http://localhost/SAC/sacexcel/excel.js",
+      "url": "https://raw.githubusercontent.com/DudiMi/SACXLSXFileUpload/master/CustomWidget/excel.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "styling",
       "tag": "com-sap-sac-excel-model",
-      "url": "http://localhost/SAC/sacexcel/aps_excel.js",
+      "url": "https://raw.githubusercontent.com/DudiMi/SACXLSXFileUpload/master/CustomWidget/aps_excel.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
