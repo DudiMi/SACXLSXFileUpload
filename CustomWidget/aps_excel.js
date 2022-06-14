@@ -152,5 +152,5 @@
             }
         }
     }
-    customElements.define("com-sap-sac-excel-model", ExcelAps);
+    customElements.define("com-fd-djaja-sap-sac-excel-aps", ExcelAps);
 })();

@@ -1,0 +1,143 @@
+{
+	"name": "ICL_Datepicker",
+	"description": "Datepicker Custom Widget",
+	"newInstancePrefix": "Datepicker",
+	"eula": "",
+	"vendor": "iProsis",
+	"license": "",
+	"id": "com.sap.datepicker.icl",
+	"version": "1.0.0",
+	"icon": "https://iprosis-sac-widgets-cdn.s3.eu-central-1.amazonaws.com/Datepicker/2f27efe77f1ba617df052935534a5909/calendarIcon.svg",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-sap-date-picker",
+			"url": "https://iprosis-sac-widgets-cdn.s3.eu-central-1.amazonaws.com/Datepicker/2f27efe77f1ba617df052935534a5909/webcomponent.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "styling",
+			"tag": "com-sap-date-picker-aps",
+			"url": "https://iprosis-sac-widgets-cdn.s3.eu-central-1.amazonaws.com/Datepicker/2f27efe77f1ba617df052935534a5909/aps_webcomponent.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"dateVal": {
+			"type": "Date",
+			"description": "default date"
+		},
+		"secondDateVal": {
+			"type": "Date",
+			"description": "default date"
+		},
+		"format": {
+			"type": "string",
+			"description": "date format",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 200
+		},
+		"height": {
+			"type": "integer",
+			"default": 48
+		},
+		"enablerange": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"methods": {
+		"setDisplayFormat": {
+			"description": "set the display date format for exmample: YYYY-MM-dd (Year = YYYY ,  Month = MM , Day = dd and not 'DD')",
+			"parameters": [
+				{
+					"name": "value",
+					"type": "string",
+					"description": "the new display date format 'YYYY-MM-dd' "
+				}
+			]
+		},
+		"getDateFormat": {
+			"returnType": "string",
+			"description": "get the date string format YYYYMMdd. (start date if range selection is enabled)"
+		},
+		"getYear": {
+			"returnType": "string",
+			"description": "get the date string format YYYY. (start date if range selection is enabled)"
+		},
+		"getMonth": {
+			"returnType": "string",
+			"description": "get the date string format MM. (start date if range selection is enabled)"
+		},
+		"getDay": {
+			"returnType": "string",
+			"description": "get the date string format dd. (start date if range selection is enabled)"
+		},
+		"getSecondDateFormat": {
+			"returnType": "string",
+			"description": "get the end date string format YYYYMMdd. (returns undefined if range selection is not enabled)"
+		},
+		"getSecondYear": {
+			"returnType": "string",
+			"description": "get the end date string format YYYY. (returns undefined if range selection is not enabled)"
+		},
+		"getSecondMonth": {
+			"returnType": "string",
+			"description": "get the end date string format MM. (returns undefined if range selection is not enabled)"
+		},
+		"getSecondDay": {
+			"returnType": "string",
+			"description": "get the end date string format dd. (returns undefined if range selection is not enabled)"
+		},
+		"getDateValue": {
+			"returnType": "Date",
+			"description": "get date. (start date if range selection is enabled)",
+			"parameters": [],
+			"body": "return this.dateVal;"
+		},
+		"setDateValue": {
+			"description": "set date. (start date if range selection is enabled)",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new date"
+				}
+			],
+			"body": "this.dateVal = dv;"
+		},
+		"getSecondDateValue": {
+			"returnType": "Date",
+			"description": "get end date. (returns undefined if range selection is not enabled)",
+			"parameters": [],
+			"body": " var x = new Date(); x = undefined; if (this.enablerange) { return this.secondDateVal; } else { return x; }"
+		},
+		"setSecondDateValue": {
+			"description": "set end date. (has no effect if range selection is not enabled)",
+			"parameters": [
+				{
+					"name": "dv",
+					"type": "Date",
+					"description": "The new date"
+				}
+			],
+			"body": "this.secondDateVal = dv;"
+		},
+		"isRangeEnabled": {
+			"description": "returns whether range selection is enabled",
+			"parameters": [],
+			"body": "return this.enablerange;",
+			"returnType": "boolean"
+		}
+	},
+	"events": {
+		"onChange": {
+			"description": "Called when selected date is changed"
+		}
+	}
+}

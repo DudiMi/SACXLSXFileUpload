@@ -12,14 +12,14 @@
     {
       "kind": "main",
       "tag": "com-fd-djaja-sap-sac-excel",
-      "url": "https://raw.githubusercontent.com/DudiMi/SACXLSXFileUpload/master/CustomWidget/excel.js",
+      "url": "https://iprosis-sac-widgets-cdn.s3.eu-central-1.amazonaws.com/DudiTest-TevaPoc1/excel.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "styling",
       "tag": "com-fd-djaja-sap-sac-excel-aps",
-      "url": "https://raw.githubusercontent.com/DudiMi/SACXLSXFileUpload/master/CustomWidget/aps_excel.js",
+      "url": "https://iprosis-sac-widgets-cdn.s3.eu-central-1.amazonaws.com/DudiTest-TevaPoc1/aps_excel.js",
       "integrity": "",
       "ignoreIntegrity": true
     }

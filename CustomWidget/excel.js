@@ -135,7 +135,7 @@
         onCustomWidgetAfterUpdate(changedProperties) {
             var that = this;
 
-            let xlsxjs = "https://raw.githubusercontent.com/DudiMi/SACXLSXFileUpload/master/CustomWidget/xlsx.js";
+            let xlsxjs = "https://iprosis-sac-widgets-cdn.s3.eu-central-1.amazonaws.com/DudiTest-TevaPoc1/xlsx.js";
             async function LoadLibs() {
                 try {
                     await loadScript(xlsxjs, _shadowRoot);
@@ -220,7 +220,7 @@
         }
 
     }
-    customElements.define("com-sap-sac-excel", Excel);
+    customElements.define("com-fd-djaja-sap-sac-excel", Excel);
 
     // UTILS
     function loadthis(that, changedProperties) {
