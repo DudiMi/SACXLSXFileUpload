@@ -24,9 +24,7 @@
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
             _id = createGuid();
-            
-            //_shadowRoot.querySelector("#oView").id = "oView";
-
+          
             this._export_settings = {};
             this._export_settings.title = "";
             this._export_settings.subtitle = "";
@@ -120,7 +118,7 @@
         }
 
         disconnectedCallback() {
-            if (this._subscription) { // react store subscription
+            if (this._subscription) {
                 this._subscription();
                 this._subscription = null;
             }
@@ -162,8 +160,6 @@
                 }
             }));
         }
-
-        // SETTINGS
         get title() {
             return this._export_settings.title;
         }
@@ -222,7 +218,6 @@
     }
     customElements.define("com-fd-djaja-sap-sac-excel", Excel);
 
-    // UTILS
     function loadthis(that, changedProperties) {
         var that_ = that;
       
@@ -265,7 +260,6 @@
         sap.ui.getCore().attachInit(function() {
           "use strict";
       
-          //### Controller ###
           sap.ui.define([
             "jquery.sap.global",
             "sap/ui/core/mvc/Controller",
@@ -436,7 +430,6 @@
           var divfinal = Ar[foundIndex].div;
           console.log(divfinal);
       
-          //### THE APP: place the XMLView somewhere into DOM ###
           var oView = sap.ui.xmlview({
             viewContent: jQuery(divfinal).html(),
           });

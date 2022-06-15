@@ -1,12 +1,12 @@
 {
-  "id": "com.fd.djaja.sap.sac.excel",
-  "version": "0.0.2",
-  "name": "excel",
-  "description": "Excel",
-  "newInstancePrefix": "Excel",
-  "vendor": "Ferry Djaja",
-  "eula": "",
-  "license": "",
+	"name": "Datepicker",
+	"description": "Datepicker Custom Widget",
+	"newInstancePrefix": "Datepicker",
+	"eula": "",
+	"vendor": "iProsis",
+	"license": "",
+	"id": "com.sap.datepicker.icl",
+	"version": "1.0.0",
   "imports": [ "input-controls" ],
   "webcomponents": [
     {
